@@ -12,15 +12,14 @@ git clone https://github.com/sS3lla/RPW
 
 ## Usage
 
-
-Ideally create a .venv first
+Ideally create a virtual enviroment first
 ```bash
-python3 -m venv .venv
+python3 -m venv venv
 ```
 
 Install dependencies with pip
 ```bash
-source .venv/bin/activate
+source venv/bin/activate
 pip install flask python-dotenv
 ```
 
