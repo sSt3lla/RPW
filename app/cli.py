@@ -20,7 +20,7 @@ def register(app):
 
         with open('__init__.py', 'w+') as f:
             f.write(f'''from flask import Blueprint
-bp = Blueprint('{name}', __name__)
+bp = Blueprint('{name}', __name__, template_folder='Templates')
 from .{name} import routes
                     ''')
         
