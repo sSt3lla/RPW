@@ -10,6 +10,7 @@ def register(app):
 
     Creates a blueprint structure with NAME and fills in with, Templates, __init.py, routes.py
     """
+        os.chdir('app')
         try:
             os.mkdir(name)
         except FileExistsError:
@@ -21,7 +22,7 @@ def register(app):
         with open('__init__.py', 'w+') as f:
             f.write(f'''from flask import Blueprint
 bp = Blueprint('{name}', __name__, template_folder='Templates')
-from .{name} import routes
+from ..{name} import routes
                     ''')
         
         with open('routes.py', 'w+') as f:
