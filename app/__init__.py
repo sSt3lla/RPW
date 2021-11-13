@@ -1,7 +1,10 @@
 from flask import Flask
+from .config import Config
 
-def create_app():
+#Need to use default variable trick to save data
+def create_app(config_class=Config):
     app = Flask(__name__)
+    app.config.from_object(config_class)
 
     #Register
     from .main import bp as main_bp
