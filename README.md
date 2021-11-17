@@ -20,7 +20,7 @@ python3 -m venv venv
 Install dependencies with pip
 ```bash
 source venv/bin/activate
-pip install flask python-dotenv flask-wtf flask-migrate
+pip install flask python-dotenv flask-wtf flask-migrate flask-login
 ```
 
 Run with
